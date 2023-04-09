@@ -2,6 +2,12 @@ local plugins = {
     "nvim-lua/plenary.nvim",
     "rebelot/kanagawa.nvim",
     {
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
         lazy = false,
         cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
@@ -15,7 +21,8 @@ local plugins = {
             "javascript",
             "typescript",
             "python",
-            "go"
+            "go",
+            "markdown"
         },
     },
     {
@@ -116,3 +123,4 @@ require("plugins.lazy")
 require("lazy").setup(plugins)
 require("plugins.lsp")
 require("plugins.colors")
+require("plugins.statusline")
