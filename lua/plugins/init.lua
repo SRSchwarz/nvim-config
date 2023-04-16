@@ -109,6 +109,16 @@ local plugins = {
             require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
         end,
     },
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end,
+    },
 
     -- cmp sources plugins
     {
@@ -118,6 +128,7 @@ local plugins = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
     },
+
 }
 require("plugins.lazy")
 require("lazy").setup(plugins)
