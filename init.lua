@@ -1,2 +1,4 @@
-require("core")
-require("plugins")
+require("core.settings")
+require("core.keymaps")
+require("core.lazy")
+require("core.colorscheme")
